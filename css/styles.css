@@ -1,21 +1,136 @@
-/* styles.css */
-
-/* Global variables */
-
-:root {
-    
+p.crafted-center {
+  text-align: center;
+  margin: 1.5rem auto;
+  font-size: 1.2rem;
+  width: 100%;
+}
+/* Full-width dashed heart image shifted right */
+.dashed-heart-bg {
+  width: 100%;
+  display: block;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  left: 8vw;
+  max-width: none;
+  height: auto;
+  z-index: 0;
 }
 
-/* Main styles */
-
+/* Global styles */
 body {
-
+  background-color: #F26A8D;
+  margin: 0;
+  font-family: 'Lobster Two', cursive;
+  overflow-x: hidden;
 }
 
+/* Dashed Navigation Bar */
+.dashed-navbar {
+  margin-top: 1.3in;
+  border-top: 6px dashed #870E1E;
+  position: relative;
+  height: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 400px;
+  padding: 0 2vw;
+}
+
+.nav-group {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: center;
+}
+.nav-left {
+  justify-content: flex-start;
+}
+.nav-center {
+  justify-content: center;
+}
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-right .nav-btn {
+  margin-right: 40px;
+}
+
+/* Navigation Buttons with Heart Background Image */
+.nav-btn {
+  position: relative;
+  top: -72px;
+  width: 140px;
+  height: 130px;
+
+  background-image: url("perfect-heart-shape.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Gravitas One', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  filter: brightness(0.85);
+}
+
+/* Text inside heart (default for everything, e.g. Crafts for Them) */
+.heart-label span {
+  display: block;
+  line-height: 1.1;
+  font-size: 1.1rem;
+  font-family: 'Gravitas One', sans-serif;
+  color: #fff;
+  text-align: center;
+  word-break: break-word;
+  padding: 0 8px;
+}
+
+/* ✅ Quicksand only for Home & Recipes+ buttons */
+.nav-btn-home .heart-label span,
+.nav-btn-recipes .heart-label span {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ✅ Quicksand only for Home, Recipes+, and The Rose Recipe nav buttons */
+.nav-btn-recipes .heart-label,
+.nav-btn-home .heart-label,
+.nav-btn-rose .heart-label {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Keep default .heart-label font for everything else (like Crafts for Them) */
 h1 {
-
+  text-align: center;
+  font-family: 'Miltonian Tattoo', cursive;
+  font-size: 7rem;
+  color: #870E1E;
+  margin-top: 0.5in;
 }
 
-p {
-
-}
