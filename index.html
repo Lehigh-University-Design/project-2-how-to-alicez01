@@ -19,23 +19,38 @@
 <body>
     <!-- Navigation Bar -->
     <nav class="dashed-navbar">
-        <div class="nav-group nav-left">
-            <button class="nav-btn nav-btn-recipes"><span class="heart-label">Recipes+</span></button>
-        </div>
         <div class="nav-group nav-center">
-            <button class="nav-btn nav-btn-home"><span class="heart-label">Home</span></button>
-        </div>
-        <div class="nav-group nav-right">
-            <button class="nav-btn nav-btn-rose"><span class="heart-label">The<br>Rose<br>Recipe</span></button>
+            <div class="dropdown">
+                <button class="nav-btn nav-btn-home"><span class="heart-label">Home</span></button>
+                <div class="dropdown-content">
+                    <a href="#recipes-section" class="nav-btn nav-btn-recipes"><span class="heart-label">Recipes+</span></a>
+                    <a href="#rose-section" class="nav-btn nav-btn-rose"><span class="heart-label">The<br>Rose<br>Recipe</span></a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- Content -->
     <h1>Crafts for Them</h1>
-    <img src="css/dashed-heart.png" alt="Dashed Heart" class="dashed-heart-bg" />
+        <img src="css/dashedline-01.png" alt="Dashed Heart" class="dashed-heart-bg dashedline-01" />
+                <span class="supplies-heart">
+                    <img src="css/perfect-heart-shape.png" alt="Supplies Heart" class="supplies-heart-img" />
+                    <span class="supplies-heart-label">Supplies</span>
+                </span>
+        <img src="css/dashedline-02.png" alt="Dashed Heart 2" class="dashed-heart-bg dashedline-02" />
+    <img src="css/dashedline-03.png" alt="Dashed Heart 3" class="dashed-heart-bg dashedline-03" />
+    <img src="css/dashedline-04.png" alt="Dashed Heart 4" class="dashed-heart-bg dashedline-04" />
+    <img src="css/dashedline-05.png" alt="Dashed Heart 5" class="dashed-heart-bg dashedline-05" />
+    <img src="css/dashedline-06.png" alt="Dashed Heart 6" class="dashed-heart-bg dashedline-06" />
+    <img src="css/greentape.png" alt="Green Tape" class="green-tape" />
+    <img src="css/skewers.png" alt="Skewers" class="skewers" />
     <p class="crafted-center">crafted with love and care and made by you.</p>
 
+    <!-- Example target sections for scrolling -->
+    <div id="recipes-section" style="margin-top: 600px;"></div>
+    <div id="rose-section" style="margin-top: 100px;"></div>
     <script src="js/script.js"></script>
+    <script src="js/dropdown.js"></script>
 </body>
 
 </html>

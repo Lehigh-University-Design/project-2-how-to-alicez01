@@ -1,14 +1,74 @@
+/* Green tape at the top */
+.green-tape {
+  display: block;
+  position: absolute;
+  top: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: auto;
+  z-index: 100;
+}
+
+/* skewers at the top */
+.skewers {
+  display: block;
+  position: absolute;
+  top: 1000px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: auto;
+  z-index: 100;
+}
+
+.dashedline-02 {
+  margin-top: -100px !important;
+}
+/* ===========================
+   DROPDOWN (if you use it later)
+=========================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 160px;
+  top: 0;
+  background: none;
+  min-width: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  z-index: 10;
+  flex-direction: row;
+  padding: 0;
+}
+.dropdown-content .nav-btn {
+  margin: 0 10px;
+  width: 140px;
+  height: 130px;
+}
+
+/* ===========================
+   TEXT
+=========================== */
 p.crafted-center {
   text-align: center;
   margin: 1.5rem auto;
   font-size: 1.2rem;
   width: 100%;
 }
-/* Full-width dashed heart image shifted right */
+
+/* Full-width dashed heart image shifted right and up */
+/* Move dashedline images up */
+/* Move both dashedline images up the page */
 .dashed-heart-bg {
   width: 100%;
   display: block;
-  margin: 0 auto 1.5rem;
+  margin: -250px auto 1.5rem;
   position: relative;
   left: 8vw;
   max-width: none;
@@ -16,17 +76,82 @@ p.crafted-center {
   z-index: 0;
 }
 
-/* Global styles */
+.dashedline-03 {
+  display: block;
+  margin-top: -26px !important;
+  margin-left: 0px;
+}
+
+
+.supplies-heart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -60px;
+  z-index: 2;
+}
+.supplies-heart-img {
+  width: 140px;
+  height: 130px;
+  object-fit: contain;
+  display: block;
+}
+.supplies-heart-label {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  margin-top: -80px;
+  font-size: 1.1rem;
+  width: 140px;
+  pointer-events: none;
+}
+
+.dashedline-04 {
+  display: block;
+  margin-top: -26px !important;
+  margin-left: 0px;
+}
+
+.dashedline-05 {
+  display: block;
+  margin-top: -50px !important;
+  margin-left: 0px;
+}
+
+.dashedline-06 {
+  display: block;
+  margin-top: -110px !important;
+  margin-left: 0px;
+}
+
+
+/* ===========================
+   GLOBAL STYLES + DASHED LINES
+=========================== */
 body {
   background-color: #F26A8D;
   margin: 0;
   font-family: 'Lobster Two', cursive;
   overflow-x: hidden;
+
+  /* Two dashed line images layered */
+  background-image: url("css/dashedline-01.png"), url("css/dashedline-02.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, 100% auto;
+  background-position: center top, center 300px; /* adjust 300px as needed */
 }
 
-/* Dashed Navigation Bar */
+/* ===========================
+   NAVIGATION BAR
+=========================== */
 .dashed-navbar {
-  margin-top: 1.3in;
+  margin-top: 0.6in;
   border-top: 6px dashed #870E1E;
   position: relative;
   height: 0;
@@ -52,12 +177,13 @@ body {
 .nav-right {
   justify-content: flex-end;
 }
-
 .nav-right .nav-btn {
   margin-right: 40px;
 }
 
-/* Navigation Buttons with Heart Background Image */
+/* ===========================
+   NAVIGATION BUTTONS
+=========================== */
 .nav-btn {
   position: relative;
   top: -72px;
@@ -90,7 +216,7 @@ body {
   filter: brightness(0.85);
 }
 
-/* Text inside heart (default for everything, e.g. Crafts for Them) */
+/* Text inside heart */
 .heart-label span {
   display: block;
   line-height: 1.1;
@@ -102,7 +228,7 @@ body {
   padding: 0 8px;
 }
 
-/* ✅ Quicksand only for Home & Recipes+ buttons */
+/* Quicksand font for nav buttons */
 .nav-btn-home .heart-label span,
 .nav-btn-recipes .heart-label span {
   font-family: "Quicksand", sans-serif;
@@ -113,7 +239,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* ✅ Quicksand only for Home, Recipes+, and The Rose Recipe nav buttons */
 .nav-btn-recipes .heart-label,
 .nav-btn-home .heart-label,
 .nav-btn-rose .heart-label {
@@ -125,7 +250,9 @@ body {
   letter-spacing: 1px;
 }
 
-/* Keep default .heart-label font for everything else (like Crafts for Them) */
+/* ===========================
+   HEADLINE
+=========================== */
 h1 {
   text-align: center;
   font-family: 'Miltonian Tattoo', cursive;
@@ -133,4 +260,3 @@ h1 {
   color: #870E1E;
   margin-top: 0.5in;
 }
-
