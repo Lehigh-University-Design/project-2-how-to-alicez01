@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // ==================================
-// MOVE HEART WITH SCROLL + CHANGE NUMBER
+// MOVE HEART WITH SCROLL + CHANGE NUMBER + DISAPPEAR AFTER POINT
 // ==================================
 document.addEventListener('DOMContentLoaded', function() {
   const stepHeart = document.querySelector('.step-heart');
@@ -50,37 +50,43 @@ document.addEventListener('DOMContentLoaded', function() {
     { number: '3', y: 2300 },
     { number: '4', y: 2600 },
     { number: '5', y: 2900 },
-    { number: 'checkpoint', y: 3200 },
-    { number: '6', y: 3500 },
-    { number: '7', y: 3800 },
-    { number: '8', y: 4100},
-    { number: '9', y: 4400},
+    { number: 'checkpoint', y: 3300 },
+    { number: '6', y: 3800 },
+    { number: '7', y: 4100 },
+    { number: '8', y: 4600 },
+    { number: '9', y: 5000 },
+    { number: '10', y: 5500 },
+    { number: '🎉', y: 6000 } // Final step with a special icon
   ];
 
-  // Starting position (matches CSS top)
-  const baseTop = 0; 
-  const movementSpeed = 0.1;
-  const appearAt = 1400; // ⬅️ increase this number to hide longer (e.g., 2500, 3000)
-  const disappears = 1400; // ⬅️ disappears quickly when scrolling up
-  // Initially hide the heart
+  // Settings
+  const baseTop = -50;       // starting offset (matches CSS top)
+  const movementSpeed = 0.1; // how fast it moves
+  const appearAt = 1800;     // when it starts showing
+  const disappearAt = 6100;  // when it fades out completely
+
+  // Initialize heart appearance
   stepHeart.style.opacity = '0';
-  stepHeart.style.transition = 'opacity 0.6s ease';
+  stepHeart.style.transition = 'opacity 0.6s ease, visibility 0.6s ease';
+  stepHeart.style.visibility = 'hidden';
 
   window.addEventListener('scroll', function() {
     const scrollY = window.scrollY;
 
-    // Fade in once user scrolls past the appearAt point
-    if (scrollY > appearAt) {
+    // Show heart between appearAt and disappearAt points
+    if (scrollY > appearAt && scrollY < disappearAt) {
       stepHeart.style.opacity = '1';
+      stepHeart.style.visibility = 'visible';
     } else {
       stepHeart.style.opacity = '0';
+      stepHeart.style.visibility = 'hidden';
     }
 
     // Move heart smoothly down as user scrolls
     const newTop = baseTop + scrollY * movementSpeed;
     stepHeart.style.top = `${newTop}px`;
 
-    // Update number based on scroll position
+    // Update the step number based on scroll position
     let currentStep = steps[0].number;
     for (let i = steps.length - 1; i >= 0; i--) {
       if (scrollY >= steps[i].y) {
@@ -89,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    // Fade animation when number changes
+    // Fade animation when the number changes
     if (stepHeartLabel.textContent !== currentStep) {
       stepHeartLabel.textContent = currentStep;
       stepHeartLabel.classList.add('fade-change');
