@@ -1,10 +1,10 @@
-// Show/hide skewers label on click
+// Show/hide greentape label on click
 
 document.addEventListener('DOMContentLoaded', function() {
   const greentapeImg = document.querySelector('.greentape-btn');
-  const greentapeLabel = document.querySelector('.skewers-label');
+  const greentapeLabel = document.querySelector('.greentape-label');
 
-  if (greentapeImgImg && greentapeLabel) {
+  if (greentapeImg && greentapeLabel) {
     greentapeImg.addEventListener('click', function() {
       greentapeLabel.classList.toggle('show');
     });
