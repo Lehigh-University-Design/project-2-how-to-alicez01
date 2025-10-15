@@ -740,6 +740,8 @@ h1 {
 .back-to-home-container {
   text-align: center;
   margin: 40px 0;
+  position: relative;
+  z-index: 9999;
 }
 
 .back-to-home-btn {
@@ -751,6 +753,7 @@ h1 {
   border-radius: 30px;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index:10000;
 }
 
 .back-to-home-btn:hover {
