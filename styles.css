@@ -1,0 +1,759 @@
+/* Green tape at the top */
+.green-tape {
+  display: block;
+  position: absolute;
+  top: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: auto;
+  z-index: 100;
+}
+
+.toothpick {
+  display: block;
+  position: absolute;
+  top: 1250px;
+  left: 17%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: auto;
+  z-index: 100;
+}
+
+.glue {
+  display: block;
+  position: absolute;
+  top: 1500px;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: auto;
+  z-index: 100;
+}
+
+.scissors {
+  display: block;
+  position: absolute;
+  top: 1580px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: auto;
+  z-index: 100;
+}
+
+.pencil {
+  display: block;
+  position: absolute;
+  top: 1420px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: auto;
+  z-index: 100;
+}
+
+.skewers-container {
+  position: absolute;
+  top: 1200px;
+  left: 70%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 101;
+}
+.skewers-btn {
+  width: 220px;
+  height: auto;
+  cursor: pointer;
+  display: block;
+}
+.skewers-label {
+  display: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #388e3c;
+  background: #fffbe6;
+  border-radius: 18px;
+  padding: 8px 24px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  top: -10px;
+  z-index: 102;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.skewers-label.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+/* paper at the top */
+.paper {
+  display: block;
+  position: absolute;
+  top: 990px;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: auto;
+  z-index: 100;
+}
+
+.dashedline-02 {
+  margin-top: -400px;
+  position: absolute;
+}
+/* ===========================
+   DROPDOWN (if you use it later)
+=========================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  background: none;
+  display: none;
+  position: absolute;
+  flex-direction: row;
+  left: 100%;
+  top: 0;
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 9999; /* Ensure it's above everything else */
+}
+.dropdown-content .nav-btn {
+  margin: 0 10px;
+  width: 140px;
+  height: 130px;
+}
+
+/* ===========================
+   TEXT
+=========================== */
+p.crafted-center {
+  text-align: center;
+  margin: 0rem auto 2rem auto;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+/* Full-width dashed heart image shifted right and up */
+/* Move dashedline images up */
+/* Move both dashedline images up the page */
+.dashed-heart-bg {
+  width: 100%;
+  display: block;
+  margin: -250px auto 1.5rem;
+  position: relative;
+  left: 8vw;
+  max-width: none;
+  height: auto;
+  z-index: 0;
+}
+
+.dashedline-03 {
+  display: block;
+  margin-top: -36px !important;
+  margin-left: 0px;
+}
+
+.step-heart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* must be absolute for JS movement */
+  top: 900px; /* starting position so it's near your supplies section */
+  left: 47%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: top 0.2s ease-out; /* smooth scroll motion */
+}
+
+.step-heart-img {
+  pointer-events: none; /* allows clicks through the image */
+  width: 740px;
+  height: 130px;
+  object-fit: contain;
+  display: block;
+}
+
+.step-heart-label {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: -80px;
+  font-size: 1.1rem;
+  width: 140px;
+  pointer-events: none;
+}
+
+.fade-change {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+.supplies-heart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 70px;
+  left: 42%;
+  z-index: 2;
+}
+
+.supplies-heart-img {
+  width: 740px;
+  height: 130px;
+  object-fit: contain;
+  display: block;
+}
+.supplies-heart-label {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  margin-top: -80px;
+  font-size: 1.1rem;
+  width: 140px;
+  pointer-events: none;
+}
+
+
+.dashedline-04 {
+  display: block;
+  margin-top: -20px !important;
+  margin-left: 0px;
+}
+
+.dashedline-05 {
+  display: block;
+  margin-top: -20px !important;
+  margin-left: 0px;
+}
+
+.dashedline-06 {
+  display: block;
+  margin-top: -20px !important;
+  margin-left: 0px;
+}
+.dashedline-07 {
+  display: block;
+  margin-top: -40px !important;
+  margin-left: 0px;
+}
+
+.dashedline-08 {
+  display: block;
+  margin-top: 0px !important;
+  margin-left: 0px;
+}
+
+.dashedline-09 {
+  display: block;
+  margin-top: 0px !important;
+  margin-left: 0px;
+}
+
+/* ===========================
+   GLOBAL STYLES + DASHED LINES
+=========================== */
+body {
+  background-color: #F26A8D;
+  margin: 0;
+  font-family: 'Lobster Two', cursive;
+  overflow-x: hidden;
+
+  /* Two dashed line images layered */
+  background-image: url("css/dashedline-01.png"), url("css/dashedline-02.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, 100% auto;
+  background-position: center top, center 300px; /* adjust 300px as needed */
+}
+
+/* ===========================
+   NAVIGATION BAR
+=========================== */
+.dashed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 0.6in;
+  border-top: 6px dashed #870E1E;
+  position: relative;
+  height: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 400px;
+  padding: 0 2vw;
+}
+
+.nav-group {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: center;
+}
+.nav-left {
+  justify-content: flex-start;
+}
+.nav-center {
+  justify-content: center;
+}
+.nav-right {
+  justify-content: flex-end;
+}
+.nav-right .nav-btn {
+  margin-right: 40px;
+}
+
+/* ===========================
+   NAVIGATION BUTTONS
+=========================== */
+.nav-btn {
+  position: relative;
+  top: -72px;
+  width: 140px;
+  height: 130px;
+
+  background-image: url("perfect-heart-shape.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Gravitas One', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  filter: brightness(0.85);
+}
+
+/* Text inside heart */
+.heart-label span {
+  display: block;
+  line-height: 1.1;
+  font-size: 1.1rem;
+  font-family: 'Gravitas One', sans-serif;
+  color: #fff;
+  text-align: center;
+  word-break: break-word;
+  padding: 0 8px;
+}
+
+/* Quicksand font for nav buttons */
+.nav-btn-home .heart-label span,
+.nav-btn-recipes .heart-label span {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-btn-recipes .heart-label,
+.nav-btn-home .heart-label,
+.nav-btn-rose .heart-label {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   HEADLINE
+=========================== */
+h1 {
+  text-align: center;
+  font-family: 'Miltonian Tattoo', cursive;
+  font-size: 7rem;
+  color: #870E1E;
+  margin-top: 0.5in;
+}
+/* ===========================
+   instructions
+=========================== */
+.instructions-fixed {
+  position: relative;
+  top: 850px; /* adjust up/down */
+  left: 60%;
+  transform: translateX(-50%);
+  font-family: 'Miltonian Tattoo', cursive;
+  font-size: 3.5rem;
+  color: #870E1E;
+  z-index: 999;
+}
+
+.instructions-step1 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 53rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-step2 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 81rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-step3 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 100rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-step4 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 120rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-step5 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 140rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-checkpoint {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 168rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-step6 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 198rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-step7 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 230rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-step8 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 255rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+} 
+
+.instructions-step9 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 290rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-step10 {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 318rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.instructions-end {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 338rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 10%;
+}
+
+.rose-instructions {
+  position: absolute;
+  text-align: center;              /* center it under the heading */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;               /* adjust size as needed */
+  color: #fff;                     /* white text matches theme */
+  max-width: 700px;                /* optional: limits line length */
+  margin: 385rem auto 3rem auto;     /* spacing under heading and above heart */
+  line-height: 1.6;                /* improves readability */
+  z-index: 2;
+  left: 60%;
+}
+/* ===========================
+   Step images
+=========================== */
+.step1 {
+  display: block;
+  position: absolute;
+  top: 1940px;
+  left: 60%;
+  width: 400px;
+  height: auto;
+  z-index: 2;
+}
+
+.step2 {
+  display: block;
+  position: absolute;
+  top: 2400px;
+  left: 60%;
+  width: 400px;
+  height: auto;
+  z-index: 2;
+}
+
+.step3 {
+  display: block;
+  position: absolute;
+  top: 2700px;
+  left: 60%;
+  width: 400px;
+  height: auto;
+  z-index: 2;
+}
+
+.step4 {
+  display: block;
+  position: absolute;
+  top: 3000px;
+  left: 60%;
+  width: 400px;
+  height: auto;
+  z-index: 2;
+}
+
+.step5 {
+  display: block;
+  position: absolute;
+  top: 3300px;
+  left: 60%;
+  width: 400px;
+  height: auto;
+  z-index: 2;
+}
+
+.checkpoint {
+  display: block;
+  position: absolute;
+  top: 3700px;
+  left: 60%;
+  width: 400px;
+  height: auto;
+  z-index: 2;
+}
+
+.step6 {
+  display: block;
+  position: absolute;
+  top: 4200px;
+  left: 60%;
+  width: 400px;
+  height: auto;
+  z-index: 2;
+}
+
+.step7 {
+  display: block;
+  position: absolute;
+  top: 4700px;
+  left: 54%;
+  width: 660px;
+  height: auto;
+  z-index: 2;
+}
+
+.step8 {
+  display: block;
+  position: absolute;
+  top: 5100px;
+  left: 54%;
+  width: 660px;
+  height: auto;
+  z-index: 2;
+}
+
+.step9 {
+  display: block;
+  position: absolute;
+  top: 5600px;
+  left: 54%;
+  width: 660px;
+  height: auto;
+  z-index: 2;
+}
+
+.step10 {
+  display: block;
+  position: absolute;
+  top: 6100px;
+  left: 60%;
+  width: 360px;
+  height: auto;}
+
+.finalstep {
+  display: block;
+  position: absolute;
+  top: 6500px;
+  left: 60%;
+  width: 360px;
+  height: auto;
+}
+
+.rose-img {
+  display: block;
+  position: absolute;
+  top: 7100px;
+  left: 30%;
+  width: 560px;
+  height: auto;
+}
+
+
+.closerose-img {
+  display: block;
+  position: absolute;
+  top: 380px;
+  left: 47%;
+  width: 150px;
+  height: auto;
+}
+
+.openrose-img {
+  display: block;
+  position: absolute;
+  top: 1320px;
+  left: 30%;
+  width: 250px;
+  height: auto;
+}
+
+.back-to-home-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-to-home-btn {
+  display: inline-block;
+  background-color: #870E1E;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-home-btn:hover {
+  background-color: #B72C3B;
+  transform: scale(1.05);
+}
