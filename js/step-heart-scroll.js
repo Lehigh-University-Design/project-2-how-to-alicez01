@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const baseTop = -50;       // starting offset (matches CSS top)
   const movementSpeed = 0.1; // how fast it moves
   const appearAt = 1800;     // when it starts showing
-  const disappearAt = 6100;  // when it fades out completely
+  const disappearAt = 6450;  // when it fades out completely
 
   // Initialize heart appearance
   stepHeart.style.opacity = '0';
