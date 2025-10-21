@@ -395,14 +395,36 @@ p.crafted-center {
   left: 42%;
   z-index: 2;
 }
+/* Pumping animation for supplies heart */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1);
+  }
+}
 
 .supplies-heart-img {
   width: 740px;
   height: 130px;
   object-fit: contain;
   display: block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  transform-origin: center center; /* expand from center */
 }
+
 .supplies-heart-label {
+  transform: translate(-0%, -0%);
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -467,6 +489,43 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, 100% auto;
   background-position: center top, center 300px; /* adjust 300px as needed */
+  cursor: url('bear.png') 64 64, auto;
+  height: auto;
+  overflow-y: auto;
+}
+/* Main cursor (optional glowing dot) */
+#cursor {
+  position: fixed;
+  width: 40px;               /* size of the bear image */
+  height: 40px;
+  background: url('bear.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;      /* so it doesn’t block clicks */
+  transform: translate(-50%, -50%);
+  z-index: 9999999;
+}
+
+/* ===========================
+   BEAR TRAIL
+=========================== */
+.bear-trail {
+  position: absolute;
+  width: 40px;            /* size of trail bear */
+  height: 40px;
+  background: url('bear.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0.6;
+  transform: translate(-50%, -50%);
+  filter: blur(2px);
+  animation: bearFade 0.6s forwards;
+}
+
+@keyframes bearFade {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 }
 
 /* ===========================
@@ -896,15 +955,28 @@ h1 {
   height: auto;
 }
 
+/* Pumping animation for closed rose */
+@keyframes pump {
+  0%, 100% {
+    transform: translateX(-50%) scale(1); /* normal size */
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1); /* slightly bigger */
+  }
+}
 
 .closerose-img {
   display: block;
   position: absolute;
   top: 380px;
-  left: 47%;
+  left: 52%;
   width: 150px;
   height: auto;
-  z-index:20000;
+  z-index: 20000;
+
+  /* Add animation */
+  animation: pump 1s ease-in-out infinite;
+  transform-origin: center bottom; /* makes it “pump” from base of the rose */
 }
 
 .openrose-img {
